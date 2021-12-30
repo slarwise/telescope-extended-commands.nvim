@@ -22,4 +22,4 @@ Call it using the `Telescope` command:
 :Telescope extended_commands
 ```
 
-Pressing enter on the command executes it.
+Pressing enter on the command executes it. `<C-E>` lets you edit the command.

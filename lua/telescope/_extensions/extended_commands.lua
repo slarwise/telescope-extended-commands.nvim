@@ -35,7 +35,7 @@ local extended_commands = function(opts)
         entry_maker = opts.entry_maker or make_entry.gen_from_commands(opts),
         previewer = conf.grep_previewer(opts),
         sorter = conf.generic_sorter(opts),
-        attach_mappings = function(prompt_bufnr)
+        attach_mappings = function(prompt_bufnr, map)
             actions.select_default:replace(function()
                 local selection = action_state.get_selected_entry()
                 if selection == nil then
@@ -48,6 +48,9 @@ local extended_commands = function(opts)
 
                 vim.cmd(cmd)
             end)
+
+            map("n", "<C-e>", actions.edit_command_line)
+            map("i", "<C-e>", actions.edit_command_line)
 
             return true
         end,
