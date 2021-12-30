@@ -29,12 +29,9 @@ local extended_commands = function(opts)
 
     pickers.new(opts, {
         prompt_title = "Commands",
-        finder = finders.new_table {
-            results = command_names,
-        },
-        entry_maker = opts.entry_maker or make_entry.gen_from_commands(opts),
-        previewer = conf.grep_previewer(opts),
+        finder = finders.new_table(command_names),
         sorter = conf.generic_sorter(opts),
+
         attach_mappings = function(prompt_bufnr, map)
             actions.select_default:replace(function()
                 local selection = action_state.get_selected_entry()
