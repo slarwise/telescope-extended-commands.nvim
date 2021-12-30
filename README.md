@@ -19,7 +19,7 @@ require('telescope').load_extension('extcommands')
 Call it using the `Telescope` command:
 
 ```vim
-:Telescope extcommands
+:Telescope extended_commands
 ```
 
 Pressing enter on the command executes it.
