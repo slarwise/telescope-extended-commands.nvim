@@ -1,10 +1,10 @@
 # telescope-extended-commands.nvim
 
 A [Telescope](https://github.com/nvim-telescope/telescope.nvim) extension that
-extends builtin commands finder for. You can pick both user-defined, and
-built-in, commands. The aim is also that for commands where it makes sense, you
-should be able to filter on sub-commands, e.g. `references` should match
-`Telescope lsp_references`.
+extends the builtin commands finder. You can pick both user-defined and built-in
+commands. Commands that take a sub-command, such as Telescope, can be filtered
+on their sub-commands. For example, `lsp_references` matches
+`Telescope lsp_references`, which can then be executed.
 
 ## Setup
 
